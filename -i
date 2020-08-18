@@ -1,0 +1,26 @@
+--> Found image 65d8e33 (8 months old) in image stream "openshift/nodejs" under tag "8" for "nodejs:8"
+
+    Node.js 8 
+    --------- 
+    Node.js 8 available as container is a base platform for building and running various Node.js 8 applications and frameworks. Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+
+    Tags: builder, nodejs, nodejs8
+
+    * The source repository appears to match: nodejs
+    * A source build using source code from https://github.com/dunchych/DO180-apps#troubleshoot-s2i will be created
+      * The resulting image will be pushed to image stream tag "nodejs-hello:latest"
+      * Use 'oc start-build' to trigger a new build
+    * This image will be deployed in deployment config "nodejs-hello"
+    * Port 8080/tcp will be load balanced by service "nodejs-hello"
+      * Other containers can access this service through the hostname "nodejs-hello"
+
+--> Creating resources ...
+    imagestream.image.openshift.io "nodejs-hello" created
+    buildconfig.build.openshift.io "nodejs-hello" created
+    deploymentconfig.apps.openshift.io "nodejs-hello" created
+    service "nodejs-hello" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/nodejs-hello' to track its progress.
+    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+     'oc expose svc/nodejs-hello' 
+    Run 'oc status' to view your app.
